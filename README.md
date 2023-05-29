@@ -1,68 +1,69 @@
 
 ### Ruth Navarro Carrasco, Alicia Benítez Rogero y Ángel José Mancha Núñez
 
-# Magic Box
+# Movie Box
 
-Este proyecto consiste en una aplicación de reproducción de videos que se puede controlar mediante gestos con el móvil. Está especialmente diseñada para ser utilizada en un ambiente educativo, en donde el profesor utilizará la parte controladora de la app desde su dispositivo móvil para interactuar con el video que se estará mostrando en otro dispositivo, como un proyector.
+This project consists of a video playback application that can be controlled through gestures using a mobile device. It is specially designed to be used in an educational environment, where the teacher will use the control part of the app from their mobile device to interact with the video being displayed on another device, such as a projector.
 
-### Funcionalidades principales
-La aplicación estará dividida en dos partes: una parte controladora que se ejecutará en el dispositivo móvil del profesor, y una parte visualizadora que se alojará en otro dispositivo para poder ver el contenido. Las funcionalidades principales de la aplicación son las siguientes:
+### Main Features
+The application will be divided into two parts: a control part that will run on the teacher's mobile device, and a viewer part that will be hosted on another device to view the content. The main features of the application are as follows:
 
-### Control mediante gestos
-La aplicación permitirá controlar el video mediante gestos realizados en la pantalla del dispositivo móvil del profesor. De esta forma, el profesor podrá interactuar con el video desde cualquier punto de la clase, lo que proporcionará un dinamismo adicional a las clases.
+### Gesture Control
+The application will allow the video to be controlled through gestures performed on the teacher's mobile device screen. This way, the teacher will be able to interact with the video from any point in the classroom, providing additional dynamism to the classes.
 
-### Anotaciones en tiempo real
-Además de la funcionalidad de control mediante gestos, la aplicación también permitirá al profesor realizar anotaciones en tiempo real sobre el video realizando un simple gesto con el controlador. Estas anotaciones se guardarán en el minuto y segundo exacto en el que se realizaron, en la pantalla del visualizador, lo que facilitará la revisión de las dudas y preguntas que surjan durante la clase.
+### Real-time Annotations
+In addition to the gesture control functionality, the application will also allow the teacher to make real-time annotations on the video by performing a simple gesture with the controller. These annotations will be saved at the exact minute and second when they were made on the viewer's screen, facilitating the review of doubts and questions that arise during the class.
 
-### Modo táctil
-Para mayor comodidad del profesor, también se ha incluido un botón para desactivar el reconocimiento de gestos y pasar al modo táctil para controlar el video. Esta función evitará que el profesor tenga que estar pendiente de los gestos involuntarios mientras realiza otra tarea con el móvil.
+### Touch Mode
+For the teacher's convenience, a button has also been included to deactivate gesture recognition and switch to touch mode to control the video. This function will prevent the teacher from having to pay attention to unintentional gestures while performing another task with the mobile device.
 
-## Uso de la aplicación
-**1.** Ir a la carpeta raiz y lanzar el servidor
+## Using the Application
+**1.** Go to the root folder and launch the server
 - *cd src*
 - *node index.js*
 
-**2.** Conectarse a *localhost 3000*
+**2.** Connect to *localhost 3000*
 
-**3.** Seleccionar adecuadamente cómo queremos que actúe el dispositivo actual (controlador o visualizador)
+**3.**  Select how you want the current device to behave (controller or viewer) appropriately.
 
 ![visualizador](src/www/media/inicio_index.png)
 
-**4.** En el visualizador, seleccionar un video.
+**4.** In the viewer, select a video.
 
 ![visualizador](src/www/media/inicio_viz.png)
 
-**5**.  Una vez se haya seleccionado el video, el controlador mostrará una miniatura de ese mismo video.
-    Por defecto, el controlador está en modo táctil para controlar el video, por lo que presionamos el botón indicado para pasar al modo gestos.
+**5**.  Once the video has been selected, the controller will display a thumbnail of the same video.
+By default, the controller is in touch mode to control the video, so press the indicated button to switch to gesture mode.
 
 ![visualizador](src/www/media/viz1.png) 
-Se puede observar cómo a la derecha aparece un apartado en el que aparecerán anotaciones.
+You can see how a section appears on the right where annotations will be displayed.
 
 ![Controlador](src/www/media/tactil_img.png) 
 
-**6.** Dentro del modo gestos:
-- Para 'reproducir/pausar' el video: Según está colgado del cuello, **inclinar el móvil hacia arriba** y volverlo a dejar caer.
-- Para 'adelantar' el video: **Agitar hacia la derecha** el móvil.
-- Para 'retrasar' el video: **Agitar hacia la izquierda** el móvil.
+**6.** Within gesture mode
+- To 'play/pause' the video: Hang the mobile device around your neck, tilt the device upwards and let it drop again.
+- To 'fast forward' the video: Shake the mobile device to the right.
+- To 'rewind' the video: Shake the mobile device to the left.
 
 
 
-**7.** Para volver al modo táctil bastará con volver a presionar el botón indicado y los gestos se desactivarán.
+**7.** To switch back to touch mode, simply press the indicated button, and the gestures will be deactivated.
 
 ![Controlador](src/www/media/gestos_img.png)
 
-**8.** Para tomar anotaciones de las dudas de los alumnos en el minuto y segundo exacto: **Deslizar con 3 dedos** sobre la pantalla del controlador hacia abajo.
+**8.** To take notes on students' questions at the exact minute and second: Swipe down with three fingers on the controller's screen.
 
 ![notas](src/www/media/nota_img.png)
 
-**9.** Para cambiar de video, basta con deslizar la ventana del visualizador hacia abajo y seleccionar otro video. Este se actualizará en el controlador.
+**9.** To change the video, simply swipe down the viewer window and select another video. It will be updated on the controller.
 
 ![visualizador](src/www/media/viz2.png)
 
 
-## Tecnologías usadas
-La aplicación se ha desarrollado utilizando las siguientes tecnologías:
+## Technologies Used
+The application has been developed using the following technologies
 
-- Lenguaje de programación: JavaScript, HTML, CSS
-- Entorno de tiempo de ejecución: Node.js
-- Framework para el reconocimiento de gestos: AbsoluteOrientationSensor
+- Programming languages: JavaScript, HTML, CSS
+- Runtime environment: Node.js
+- API: Sensor API, Touch API
+- Gesture recognition framework: AbsoluteOrientationSensor
